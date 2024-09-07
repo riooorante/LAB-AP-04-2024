@@ -1,9 +1,13 @@
-#input
-karakter = str(input("Masukkan karakter: "))
-kalimat = str(input("Masukkan kalimat: "))
+#Input harga saham kemarin
+saham_kemarin = float(input("Masukkan harga saham kemarin: "))
 
-#Menggunakan operator "in" untuk memeriksa keberadaan karakter
-pesan = ["tidak ditemukan dalam", "merupakan bagian dari"][karakter in kalimat]
+saham_hari_ini = 105.0
+rekomendasi = ["Beli", "Tahan", "Jual"]
 
-#Menampilkan pesan
-print(f"'{karakter}'{pesan}'{kalimat}'")
+#Menghitung perubahan persentase harga saham
+perubahan_persentase = ((saham_hari_ini - saham_kemarin)/saham_kemarin)*100
+hasil = rekomendasi[(perubahan_persentase > -3)+(perubahan_persentase > 5)]
+
+#Menampilkan hasil
+print(f"Rekomendasi persentase harga saham:{perubahan_persentase:.2f}%")
+print(f"Rekomendasi investasi: {hasil}")
