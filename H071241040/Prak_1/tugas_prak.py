@@ -6,6 +6,18 @@ persen_baru = ((hari_ini-kemarin)/kemarin)*100
 hasil = output [(persen_baru > -3)+(persen_baru > 5)]
 print(f"perubahan persentasi harga saham {persen_baru}%")
 print(hasil)
+
+# hari_ini = 105.0
+# kemarin = float(input("Masukkan harga saham kemarin : "))
+# output = ["jual","Tahan","Beli"]
+# persen_baru = ((hari_ini-kemarin)/kemarin)*100
+# if persen_baru > 5:
+#     print("beli")
+# elif -3< persen_baru <= 5 :
+#     print("tahan")
+# else :
+#     print("jual")
+
 #Nomor 2
 karakter = input("Masukkan Karakter :")
 kalimat = input("Kalimat : ")
