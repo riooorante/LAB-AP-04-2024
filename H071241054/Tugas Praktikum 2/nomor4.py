@@ -13,6 +13,7 @@ if jenis_pengguna == "personal":
         print("Paket yang sesuai: Paket C")
     else:
         print("Tidak ada paket yang cocok")
+        
 elif jenis_pengguna == "bisnis":
     if penggunaan_data > 50 and waktu_penggunaan == "peak":
         print("Paket yang sesuai: Paket C")
