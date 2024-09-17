@@ -58,7 +58,7 @@
 #             print("Anda Tidak Lulus")
 
         
-# # #soal 4
+# soal 4
 
 
 Jumlah_data = int(input("Jumlah data yang digunakan (GB) : "))
