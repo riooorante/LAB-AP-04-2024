@@ -41,6 +41,9 @@ def blackjack():
     total_kartu_pemain = hitung_total(kartu_pemain)
     total_dealer = hitung_total(kartu_dealer)
 
+    hasil(total_kartu_pemain, total_dealer)
+
+def hasil(total_kartu_pemain, total_dealer):
     if total_dealer > 21:
         print("Anda menang, dealer melebihi 21.")
     elif total_kartu_pemain > total_dealer:

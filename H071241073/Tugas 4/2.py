@@ -20,6 +20,10 @@ def permainan_harta_karun():
             print("Input tidak valid. Silakan masukkan angka.")
 
     print(f"Total jarak: {total_jarak} meter")
+
+    Keputusan(total_jarak, bahaya_terdeteksi)
+
+def Keputusan(total_jarak, bahaya_terdeteksi):
     if total_jarak > 50 or bahaya_terdeteksi:
         print("Ada bahaya: Ya")
     else:
