@@ -62,7 +62,7 @@ def main_blackjack():
     else:
         print("Dealer menang!")
 
-if input("Ingin bermain lagi? (y/n) ").lower() != 'y':
-    break
-
 main_blackjack()
+
+
+

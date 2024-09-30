@@ -1,40 +1,37 @@
-def input_distance():
-    """Fungsi untuk mengambil input jarak langkah dari pemain."""
+def input_jarak():
     while True:
         try:
-            distance = int(input("Masukkan langkah (meter) atau 0 untuk selesai: "))
-            return distance
+            jarak = int(input("Masukkan langkah (meter) atau 0 untuk selesai: "))
+            return jarak
         except ValueError:
             print("Input tidak valid. Masukkan bilangan bulat.")
 
-def treasure_hunt():
-    """Fungsi utama untuk menjalankan permainan berburu harta karun."""
-    total_distance = 0
-    danger_detected = False
+def berburu_harta():
+    total_jarak = 0
+    bahaya_terdeteksi = False
     
     while True:
-        distance = input_distance()
+        jarak = input_jarak()
         
-        if distance < 0:
+        if jarak < 0:
             print("Langkah tidak dapat negatif. Permainan dihentikan.")
             break
-        elif distance == 0:
+        elif jarak == 0:
             break
         
-        total_distance += distance
+        total_jarak += jarak
         
-        if distance > 20:
-            danger_detected = True
+        if jarak > 20:
+            bahaya_terdeteksi = True
     
-    print(f"Total jarak: {total_distance} meter")
-    if danger_detected:
+    print(f"Total jarak: {total_jarak} meter")
+    if bahaya_terdeteksi:
         print("Ada bahaya: Ya")
         print("Keputusan: Tidak aman untuk menggali harta karun. Coba lagi!")
     else:
-        if total_distance == 50:
+        if total_jarak == 50:
             print("Aman! Kamu tepat menemukan harta karun dan menang!")
         else:
             print("Tidak menemukan harta karun. Coba lagi!")
 
-# Memulai permainan
-treasure_hunt()
+berburu_harta()

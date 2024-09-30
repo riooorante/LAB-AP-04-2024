@@ -1,46 +1,38 @@
-def calculator():
-    """Fungsi untuk kalkulator sederhana."""
+def kalkulator():
     print("Selamat datang di Kalkulator Sederhana!")
+
+    while True:
+        try:
+            angka1 = float(input("Angka pertama: "))
+            break
+        except ValueError:
+            print("Input tidak valid. Silakan masukkan angka.")
+
+    while True:
+        try:
+            angka2 = float(input("Angka kedua: "))
+            break
+        except ValueError:
+            print("Input tidak valid. Silakan masukkan angka.")
     
-    # Menerima input angka pertama
     while True:
-        try:
-            num1 = float(input("Angka pertama: "))
-            break
-        except ValueError:
-            print("Input tidak valid. Silakan masukkan angka.")
-
-    # Menerima input angka kedua
-    while True:
-        try:
-            num2 = float(input("Angka kedua: "))
-            break
-        except ValueError:
-            print("Input tidak valid. Silakan masukkan angka.")
-
-    # Menerima input operasi
-    while True:
-        operation = input("Operasi (+, -, *, /): ")
-        if operation in ['+', '-', '*', '/']:
+        operasi = input("Operasi (+, -, *, /): ")
+        if operasi in ['+', '-', '*', '/']:
             break
         else:
             print("Operasi tidak valid. Gunakan +, -, *, atau /.")
 
-    # Melakukan operasi yang diinginkan
-    if operation == '+':
-        result = num1 + num2
-    elif operation == '-':
-        result = num1 - num2
-    elif operation == '*':
-        result = num1 * num2
-    elif operation == '/':
-        if num2 == 0:
-            print("Pembagian dengan nol tidak diperbolehkan.")
-            return
-        result = num1 / num2
+    if operasi == '+':
+        hasil = angka1 + angka2
+    elif operasi == '-':
+        hasil = angka1 - angka2
+    elif operasi == '*':
+        hasil = angka1 * angka2
+    elif operasi == '/':
+        if angka2 == 0:
+            return print("Pembagian dengan nol tidak diperbolehkan.")
+        hasil = angka1 / angka2
 
-    # Menampilkan hasil
-    print(f"Hasil: {result}")
+    print(f"Hasil: {int(hasil)}")
 
-# Memulai kalkulator
-calculator()
+kalkulator()
