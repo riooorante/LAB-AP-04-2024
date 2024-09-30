@@ -3,19 +3,23 @@ def hitung_total_jarak(langkah):
     global total_jarak
     total_jarak += langkah
 
-def ada_bahaya_keputusan(total_jarak):
+def ada_bahaya(total_jarak):
     if total_jarak == 50:
         bahaya = "Tidak"
-        keputusan = "Aman! Kamu tepat menemukan harta karun dan menang!"
     elif total_jarak < 50:
         bahaya = "-"
-        keputusan = "Tidak menemukan harta karun. Coba lagi!"
     else:
         bahaya = "Ya"
-        keputusan = "Tidak aman untuk menggali harta karun. Coba lagi!"
+    return bahaya
 
-    print(f"Ada bahaya: {bahaya}")
-    print(f"Keputusan: {keputusan}")
+def keputusan_akhir(total_jarak):
+    if total_jarak == 50:
+        keputusan = "Aman! Kamu tepat menemukan harta karun dan menang!"
+    elif total_jarak < 50:
+        keputusan = "Tidak menemukan harta karun. Coba lagi!"
+    else:
+        keputusan = "Tidak aman untuk menggali harta karun. Coba lagi!"
+    return keputusan
 
 while True:
     try:
@@ -35,4 +39,5 @@ while True:
         print("Input tidak valid. Harap masukkan bilangan bulat positif!")
 
 print(f"Total jarak: {total_jarak} meter")
-ada_bahaya_keputusan(total_jarak)
+print(f"Ada bahaya: {ada_bahaya(total_jarak)}")
+print(f"Keputusan: {keputusan_akhir(total_jarak)}")

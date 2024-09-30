@@ -8,13 +8,14 @@ def total_skor(kartu):
 
 def penentuan(skor_dealer, skor_pemain):
     if skor_dealer > 21:
-        print("Anda menang, dealer melebihi 21.")
+        akhir_permainan = "Anda menang, dealer melebihi 21."
     elif skor_pemain > skor_dealer:
-        print("Anda menang!")
+        akhir_permainan = "Anda menang!"
     elif skor_pemain < skor_dealer:
-        print("Dealer menang!")
+        akhir_permainan = "Dealer menang!"
     else:
-        print("Seri!")
+        akhir_permainan = "Seri!"
+    return akhir_permainan
 
 #memainkan permainan blackjack
 print("Welcome to Blackjack!")
@@ -48,4 +49,4 @@ while skor_dealer < 17:
     skor_dealer = total_skor(kartu_dealer)
     print(f"Kartu dealer sekarang adalah: {skor_dealer}")
 
-penentuan(skor_dealer, skor_pemain)
+print(penentuan(skor_dealer, skor_pemain))
