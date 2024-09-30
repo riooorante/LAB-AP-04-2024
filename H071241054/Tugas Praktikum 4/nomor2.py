@@ -19,7 +19,7 @@ def ada_bahaya_keputusan(total_jarak):
 
 while True:
     try:
-        langkah = int(input("Masukkan langkah (meter) atau 0 untuk selesai: "))
+        langkah = int(input("Masukkan langkah (meter) atau 0 untuk selesai: ")) #meminta input dari pengguna
 
         if langkah < 0:
             print("Input tidak valid. Harap masukkan bilangan bulat positif!")
@@ -33,6 +33,6 @@ while True:
 
     except ValueError:
         print("Input tidak valid. Harap masukkan bilangan bulat positif!")
-    
+
 print(f"Total jarak: {total_jarak} meter")
 ada_bahaya_keputusan(total_jarak)
