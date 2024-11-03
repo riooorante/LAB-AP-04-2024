@@ -2,6 +2,10 @@ try:
     populasi_a = float(input("Masukkan populasi awal Serangga A: "))
     populasi_b = float(input("Masukkan populasi awal Serangga B: "))
     hari = int(input("Masukkan jumlah hari untuk prediksi : "))
+    
+    if populasi_a < 0 or populasi_b < 0 or hari < 0:
+            print("Angka tidak boleh dibawah 0")
+            exit()
       
     for day in range(1, hari + 1):
         if day % 2 == 1:  # Hari ganjil
@@ -16,7 +20,7 @@ try:
             total_populasi = populasi_a + populasi_b
             populasi_a -= total_populasi * 0.1  # Predator memakan 10%
             populasi_b -= total_populasi * 0.1  # Predator memakan 10%
-        
+            
         print(f"Hari {day}: Serangga A = {populasi_a:.0f}, Serangga B = {populasi_b:.0f}")
 
 
