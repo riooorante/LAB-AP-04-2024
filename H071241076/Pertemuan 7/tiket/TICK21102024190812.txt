@@ -1,0 +1,8 @@
+---------------------------------
+|          TIKET BIOSKOP        |
+---------------------------------
+|ID Tiket : TICK21102024190812
+|Film     : abc
+|Tanggal  : 21-10-2024 19:08:12
+---------------------------------
+Terima kasih telah menonton ditempat kami
